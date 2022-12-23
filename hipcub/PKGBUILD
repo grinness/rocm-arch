@@ -25,7 +25,8 @@ build() {
     -B build \
     -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_INSTALL_PREFIX=/opt/rocm \
-    -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc
+    -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc \
+    -DCMAKE_CXX_FLAGS="--hip-link -Qunused-arguments"
   cmake --build build
 }
 
