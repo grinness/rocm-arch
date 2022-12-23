@@ -31,6 +31,7 @@ build() {
     -S "$_dirname" \
     -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc \
+    -DCMAKE_CXX_FLAGS="--hip-link -Qunused-arguments" \
     -DCMAKE_INSTALL_PREFIX=/opt/rocm \
     -DROCM_PATH=/opt/rocm \
     -DHIP_ROOT_DIR=/opt/rocm/hip \
