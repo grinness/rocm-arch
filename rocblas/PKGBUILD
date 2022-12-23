@@ -31,6 +31,8 @@ build() {
     -S "$_dirname" \
     -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc \
+    -DCMAKE_CXX_FLAGS="--hip-link -Qunused-arguments" \
+    -DCMAKE_C_FLAGS="--hip-link -Qunused-arguments" \
     -DCMAKE_INSTALL_PREFIX=/opt/rocm \
     -DCMAKE_PREFIX_PATH=/opt/rocm/llvm/lib/cmake/llvm \
     -Damd_comgr_DIR=/opt/rocm/lib/cmake/amd_comgr \
