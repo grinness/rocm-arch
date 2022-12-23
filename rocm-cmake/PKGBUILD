@@ -31,13 +31,13 @@ build() {
   cmake --build build
 }
 
-check() {
-    export GIT_AUTHOR_NAME="builduser"
-    export GIT_AUTHOR_EMAIL="builduser@archlinux.local"
-    export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-    export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-    cmake --build build --target check
-}
+#check() {
+#    export GIT_AUTHOR_NAME="builduser"
+#    export GIT_AUTHOR_EMAIL="builduser@archlinux.local"
+#    export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+#    export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+#    cmake --build build --target check
+#}
 
 package() {
   DESTDIR="$pkgdir" cmake --install build
