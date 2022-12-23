@@ -24,6 +24,7 @@ build() {
     -B build \
     -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_CXX_COMPILER=/opt/rocm/bin/hipcc \
+    -DCMAKE_CXX_FLAGS="--hip-link -Qunused-arguments" \
     -DCMAKE_INSTALL_PREFIX=/opt/rocm \
     -Damd_comgr_DIR=/opt/rocm/lib/cmake/amd_comgr
   cmake --build build
